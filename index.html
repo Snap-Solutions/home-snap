@@ -5,11 +5,26 @@
 		<link rel="icon" href="/favicon.jpg">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Snap Solutions</title>
-		<script type="module" crossorigin src="/assets/index-CtUDrGM3.js"></script>
+		<script type="module" crossorigin src="/assets/index-f4iBEMX2.js"></script>
 		<link rel="stylesheet" crossorigin href="/assets/index-iKPjEIV2.css">
 	</head>
 
 	<body>
 		<div id="app"></div>
+		
+		<!-- Script para GitHub Pages SPA Routing -->
+		<script>
+			// Detecta se estamos em uma página 404 do GitHub Pages
+			(function() {
+				var path = window.location.pathname;
+				if (path !== '/' && !path.includes('.')) {
+					// Salva a URL desejada
+					sessionStorage.setItem('githubPagesRedirect', path);
+					// Redireciona para a página inicial
+					window.location.href = '/';
+				}
+			})();
+		</script>
+		
 	</body>
 </html>
